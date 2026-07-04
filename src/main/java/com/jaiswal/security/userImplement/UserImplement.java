@@ -35,7 +35,7 @@ public class UserImplement implements UserServices {
         Users users = new Users();
         users.setName(registerModel.getName());
         users.setEmail(registerModel.getEmail());
-        users.setPassword(registerModel.getPassword());
+        users.setPassword(passwordEncoder.encode(registerModel.getPassword()));
         users.setPhone(registerModel.getPhone());
         users.setRole(registerModel.getRole());
         users.setStatus(registerModel.getStatus());
